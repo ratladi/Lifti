@@ -13,10 +13,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.firebase.client.DataSnapshot;
-import com.firebase.client.Firebase;
-import com.firebase.client.FirebaseError;
-import com.firebase.client.ValueEventListener;
+//import com.firebase.client.DataSnapshot;
+//import com.firebase.client.Firebase;
+//import com.firebase.client.FirebaseError;
+//import com.firebase.client.ValueEventListener;
 import com.kabo.DashboardFragment;
 import com.kabo.activity.AddTripFragment;
 import com.kabo.activity.FragmentDrawer;
@@ -25,7 +25,7 @@ import com.kabo.activity.TripFragment;
 
 public class MainActivity extends AppCompatActivity implements FragmentDrawer.FragmentDrawerListener{
 
-    Firebase myFirebaseRef;
+    //Firebase myFirebaseRef;
     private static String TAG = MainActivity.class.getSimpleName();
 
     private Toolbar mToolbar;
