@@ -46,10 +46,14 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         drawerFragment.setDrawerListener(this);
 
         // display the first navigation drawer view on app launch
-        displayView(0);
-
+        if (savedInstanceState == null) {
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            TripFragment fragment = new TripFragment();
+            transaction.replace(R.id.container_body, fragment);
+            transaction.commit();
+        }
     }
-   // @Override
+    // @Override
 //    public void onStart(){
 //        super.onStart();
 ////
@@ -107,15 +111,15 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         Fragment fragment = null;
         String title = getString(R.string.app_name);
         switch (position) {
-//            case 0:
-//                fragment = new TripFragment();
-//                title = getString(R.string.title_trips);
-//                break;
             case 0:
+                fragment = new TripFragment();
+                title = getString(R.string.title_trips);
+                break;
+            case 1:
                 fragment = new AddTripFragment();
                 title = getString(R.string.title_add_trips);
                 break;
-            case 1:
+            case 2:
                 fragment = new DashboardFragment();
                 title = getString(R.string.title_dashboard);
                 break;

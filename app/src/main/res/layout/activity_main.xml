@@ -21,12 +21,32 @@
                 android:id="@+id/toolbar"
                 layout="@layout/toolbar" />
         </LinearLayout>
+        <ViewAnimator
+            android:id="@+id/sample_output"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1">
 
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/horizontal_page_margin"
+                    android:paddingRight="@dimen/horizontal_page_margin"
+                    android:paddingTop="@dimen/vertical_page_margin"
+                    android:paddingBottom="@dimen/vertical_page_margin"
+                    android:text="Map goes here..." />
+            </ScrollView>
+
+        </ViewAnimator>
         <FrameLayout
             android:id="@+id/container_body"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1" />
+            android:layout_weight="3" />
 
 
     </LinearLayout>
@@ -39,6 +59,8 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:layout="@layout/fragment_navigation_drawer"
-        tools:layout="@layout/fragment_navigation_drawer" />
+        tools:layout="@layout/fragment_navigation_drawer"
+        />
+
 
 </android.support.v4.widget.DrawerLayout>
